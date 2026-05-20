@@ -1,0 +1,8 @@
+[window]
+opacity = 0.75
+
+[general]
+import = [
+"~/Documents/themebackup/alacritty/tokyo_night_enhanced.toml"
+
+]
