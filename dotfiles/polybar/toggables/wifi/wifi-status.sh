@@ -17,7 +17,7 @@ if [ -n "$SSID" ]; then
     SIGNAL=$(nmcli -t -f active,signal dev wifi 2>/dev/null \
         | grep '^yes' \
         | cut -d: -f2)
-    echo "󰤨 $SSID (${SIGNAL}%)"
+    echo " %{F#FF1378} 󰤨 %{F-}${SIGNAL}%"
 else
     echo "󰤫 disconnected"
 fi

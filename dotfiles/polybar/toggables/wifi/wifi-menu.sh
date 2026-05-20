@@ -27,7 +27,7 @@ wifi_menu() {
             security = $NF
             printf "%s%-30s signal:%-4s %s\n", in_use, ssid, signal, security
           }' \
-        | rofi -dmenu -p "WiFi" -i -no-custom)
+        | rofi -dmenu -p "WiFi" -i -no-custom )
 
     [ -z "$NETWORK" ] && exit 0
 

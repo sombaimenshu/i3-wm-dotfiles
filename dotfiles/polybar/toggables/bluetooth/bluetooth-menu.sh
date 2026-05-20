@@ -16,9 +16,10 @@ bt_status() {
         CONNECTED=$(bluetoothctl info 2>/dev/null | grep -c "Connected: yes")
         if [ "$CONNECTED" -gt 0 ]; then
             DEVICE=$(bluetoothctl info 2>/dev/null | grep "Name" | awk '{print $2}')
-            echo "󰂱 $DEVICE"   # BT connected
+            echo "%{F#ff1378}󰂱 %{F-}$DEVICE"   # BT connected
+
         else
-            echo "󰂯"           # BT on, nothing connected
+            echo "%{F#ff1378}󰂯%{F-}"           # BT on, nothing connected
         fi
     else
         echo "󰂲"               # BT off
