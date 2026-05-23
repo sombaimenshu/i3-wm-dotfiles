@@ -6,6 +6,7 @@
 #
 
 #exec_always --no-startup-id xinput set-prop 12 "Device Enabled" 0
+exec_always --no-startup-id xinput set-prop 12 "libinput Tapping Enabled" 0
 exec_always --no-startup-id killall polybar; polybar
 #for_window [class="Alacritty"] border pixel 2
 for_window [class="^.*"] border pixel 2
@@ -246,4 +247,4 @@ client.focused          #ff1378 #ff1378 #ffffff #ff1378 #ffffff
 client.unfocused        #333355 #0d1117 #555577 #333355 #333355
 client.focused_inactive #333355 #0d1117 #555577 #333355 #333355
 
-
+focus_follows_mouse no
